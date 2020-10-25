@@ -1,0 +1,23 @@
+name: PropHuntSigns
+version: ${project.version}
+author: Tomski - Creator of PropHunt
+website: www.skicraft.enjin.com
+main: me.tomski.prophuntsigns.PropHuntSigns
+commands:
+    prophuntsigns:
+        description: Use to manage PropHuntSigns
+        aliases: [phs]
+        permission-message: You dont have permission for PropHuntSign commands
+        usage: /phs /prophuntsigns for PropHuntSigns commands!
+permissions:
+    prophunt.use.join:
+        default: op
+        description: Allows use of PropHuntSigns!
+    prophunt.place.*:
+        description: Gives access to all user permissions
+        children:
+            prophuntsigns.place.join: true
+            prophuntsigns.place.info: true
+    prophuntsigns.reload:
+        default: op
+        description: Allows use of PropHuntSigns reload!
